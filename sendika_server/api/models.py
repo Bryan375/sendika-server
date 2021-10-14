@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class MLModel(models.Model):
-    smile_name = models.TextField(max_length=120)
+    smile_name = models.CharField(max_length=120)
     result = models.FloatField()
     
     def __str__(self):
