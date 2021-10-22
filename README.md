@@ -52,6 +52,8 @@ You can install them by using: `pip install <fileName>` while accessing the pipe
 ## pip install
 1. After tensorflow was installed, run `pip install --upgrade tensorflow`
 2. run `pip install rdkit-pypi`
+3. run `pip install dgl'
+4. run `pip install dgllife`
 
 # Resources
 * Good example of using Django as backend and React as front-end 
