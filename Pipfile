@@ -10,6 +10,13 @@ django-cors-headers = "*"
 gunicorn = "*"
 django-heroku = "*"
 numpy = "*"
+deepchem = "*"
+matplotlib = "*"
+pandas = "*"
+scikit-learn = "*"
+scipy = "*"
+tensorflow = "*"
+rdkit-pypi = "*"
 
 [dev-packages]
 
