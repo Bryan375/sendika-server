@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath sendika_server sendika_server.wsgi
+web: gunicorn sendika_server.wsgi
