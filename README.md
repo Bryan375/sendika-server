@@ -38,6 +38,7 @@ To run the model, please go to [this link](https://www.lfd.uci.edu/~gohlke/pytho
 * scikit-learn
 * scipy
 * tensorflow
+* pytorch
 
 You can place the files anywhere you like but it is recommended to put them inside of the ```sendika-server/sendika-server``` directory.
 You can install them by using: `pip install <fileName>` while accessing the pipenv.
