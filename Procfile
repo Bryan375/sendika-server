@@ -1,0 +1,1 @@
+web: gunicorn sendika_server.sendika_server.wsgi
