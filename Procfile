@@ -1,1 +1,1 @@
-web: gunicorn sendika-server.wsgi
+web: gunicorn sendika_server.wsgi
