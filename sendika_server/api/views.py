@@ -24,7 +24,7 @@ class MLView(viewsets.ModelViewSet):
     
     @action(methods=['post'], detail=False, url_path="predict-single-smile", url_name="predict_single_smile")
     def predictSingleSMILE(self, request):
-        singleSmile = request.data
+        singleSmile = request.data 
         serializers = MLSerializer(singleSmile, data=singleSmile)
         if serializers.is_valid():
             transfered_model = GraphConvModel(n_tasks=1, 
@@ -47,6 +47,5 @@ class MLView(viewsets.ModelViewSet):
                 inputSmile = loader.create_dataset(tmpFile.name)
             
             predicted_pIC50 = transfered_model.predict(inputSmile)
-
             return Response({"predicted_pIC50": predicted_pIC50[0][0]}, status=status.HTTP_200_OK)
         return Response(serializers.errors, status=status.HTTP_400_BAD_REQUEST)
