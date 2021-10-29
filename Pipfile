@@ -15,8 +15,11 @@ matplotlib = "*"
 pandas = "*"
 scikit-learn = "*"
 scipy = "*"
-tensorflow = "*"
 rdkit-pypi = "*"
+dgl = "*"
+dgllife = "*"
+tensorflow-cpu = "*"
+torch = "*"
 
 [dev-packages]
 

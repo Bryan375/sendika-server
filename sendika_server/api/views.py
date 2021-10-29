@@ -90,4 +90,4 @@ class MLView(viewsets.ModelViewSet):
                 predicted_pIC50 = transfered_model.predict(inputSmile)
 
             return Response({"predicted_pIC50": predicted_pIC50[0][0]}, status=status.HTTP_200_OK)
-        return Response(serializers.errors, status=status.HTTP_400_BAD_REQUEST)
+        return Response(serializers.errors, status=status.HTTP_400_BAD_REQUEST) 
