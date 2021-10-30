@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "917d464076d787ed8ff956207d49a6e9302d758953fbf9a4f975a2d00551db0d"
+            "sha256": "e9783bb3b14571c37057f9ac084231b728817e19d3577473390687b559a6cfa0"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -155,6 +155,14 @@
             ],
             "index": "pypi",
             "version": "==3.10.0"
+        },
+        "django-environ": {
+            "hashes": [
+                "sha256:42593bee519a527602a467c7b682aee1a051c2597f98c45f4f4f44169ecdb6e5",
+                "sha256:6f0bc902b43891656b20486938cba0861dc62892784a44919170719572a534cb"
+            ],
+            "index": "pypi",
+            "version": "==0.8.1"
         },
         "django-heroku": {
             "hashes": [
@@ -826,9 +834,9 @@
         },
         "tensorflow-estimator": {
             "hashes": [
-                "sha256:cf78528998efdb637ac0abaf525c929bf192767544eb24ae20d9266effcf5afd"
+                "sha256:325b5a224864379242b7b76c6987ca544239be82579d33e68ec7c2bda57abc9d"
             ],
-            "version": "==2.6.0"
+            "version": "==2.7.0"
         },
         "termcolor": {
             "hashes": [

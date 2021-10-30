@@ -20,6 +20,7 @@ dgl = "*"
 dgllife = "*"
 tensorflow-cpu = "*"
 torch = "*"
+django-environ = "*"
 
 [dev-packages]
 
