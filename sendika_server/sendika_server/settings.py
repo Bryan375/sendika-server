@@ -12,15 +12,19 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 import os
 from pathlib import Path
-import environ
+# import environ
 
-env = environ.Env()
+# env = environ.Env()
 
 # reading .env file
-environ.Env.read_env()
+# environ.Env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+
+
+
 
 
 
@@ -28,12 +32,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env('SECRET_KEY')
+SECRET_KEY='django-insecure-)&z3=*#*nh2r))xsum^l9p)_jsnqhzpc9vo!0ql=!o*g@bii%r'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env('DEBUG')
+DEBUG='True'
 
-ALLOWED_HOSTS = env('ALLOWED_HOSTS').split(',')
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS')
 
 
 # Application definition
@@ -46,14 +50,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'api',
-    'corsheaders',
     'rest_framework',
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -138,6 +142,34 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-CORS_ORIGIN_WHITELIST = [
-    'http://localhost:3000'
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOWED_ORIGINS = ['https://sendika.netlify.app']
+CORS_ORIGIN_WHITELIST = 'https://sendika.netlify.app',
+
+CORS_ALLOW_METHODS = [
+    "DELETE",
+    "GET",
+    "OPTIONS",
+    "PATCH",
+    "POST",
+    "PUT",
 ]
+
+CORS_ALLOW_HEADERS = [
+    "Accept",
+    "Accept-Encoding",
+    "Authorization",
+    "Content-Type",
+    "Dnt",
+    "Origin",
+    "User-Agent",
+    "X-Csrftoken",
+    "X-Requested-With",
+    "X-Auth-Token"
+]
+
+
+# CORS_ORIGIN_WHITELIST = [
+#     'http://localhost:3000',
+#     'https://sendika.netlify.app'
+# ]

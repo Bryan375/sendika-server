@@ -88,6 +88,10 @@ class MLView(viewsets.ModelViewSet):
 
                 transfered_model.restore()
                 predicted_pIC50 = transfered_model.predict(inputSmile)
-
-            return Response({"predicted_pIC50": predicted_pIC50[0][0]}, status=status.HTTP_200_OK)
+            
+            response = Response({"predicted_pIC50": predicted_pIC50[0][0]}, status=status.HTTP_200_OK)
+            response["Access-Control-Allow-Origin"] = "*"
+            response["Access-Control-Allow-Methods"] = "GET, POST, OPTIONS"
+            response["Access-Control-Allow-Headers"] = "*"
+            return response
         return Response(serializers.errors, status=status.HTTP_400_BAD_REQUEST) 

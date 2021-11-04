@@ -16,11 +16,12 @@ pandas = "*"
 scikit-learn = "*"
 scipy = "*"
 rdkit-pypi = "*"
-dgl = "*"
 dgllife = "*"
 tensorflow-cpu = "*"
 torch = "*"
 django-environ = "*"
+dgl = "*"
+psycopg2-binary = "*"
 
 [dev-packages]
 
